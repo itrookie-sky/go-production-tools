@@ -1,7 +1,7 @@
 # 基于Golang开发的flutter生产工具
 
 ## flutter资源配置生成工具
-### 自动化标示
+### 自动化标识
 ```
 flutter:
 
@@ -12,8 +12,8 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-  ## <<assets begin>>[起始标示]
+  ## <<assets begin>>[起始标识]
     - images/btn_denglu.png
     - images/common/btn_chehui.png
-  ## <<assets end>>[结束标示]
+  ## <<assets end>>[结束标识]
 ```
