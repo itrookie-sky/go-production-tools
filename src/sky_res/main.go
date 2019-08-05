@@ -15,7 +15,6 @@ const _defineInput string = "/images"
 const _defineOutput string = "/pubspec.yaml"
 const _begin string = "## <<assets begin>>"
 const _end string = "## <<assets end>>"
-const publishCli string = "go_publish"
 
 //通用资源名头部
 const _assetsTitle string = "- "
@@ -37,6 +36,7 @@ type Info struct {
 //实例化初始数据
 var info *Info = &Info{}
 
+//GetOutput
 //获取输出文件路径
 func (i *Info) GetOutput() (string, error) {
 	path, err := filepath.Abs(i.pwd + i.output)
@@ -81,7 +81,7 @@ func main() {
 	info.output = _defineOutput
 	info.input = _defineInput
 	info.pwd = pwd
-	info.files = []string{"  assets:\n"}
+	info.files = []string{}
 
 	switch length {
 	case 2:

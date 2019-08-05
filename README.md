@@ -1,5 +1,6 @@
-# 基于Golang开发的生产工具
+# 基于Golang开发的flutter生产工具
 
+## flutter资源配置生成工具
 ### 自动化标示
 ```
 flutter:
@@ -10,8 +11,8 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  ## <<assets begin>>[起始标示]
   assets:
+  ## <<assets begin>>[起始标示]
     - images/btn_denglu.png
     - images/common/btn_chehui.png
   ## <<assets end>>[结束标示]
