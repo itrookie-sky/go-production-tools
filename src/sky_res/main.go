@@ -11,7 +11,7 @@ import (
 	"strings"
 )
 
-const _defineInput string = "/images"
+const _defineInput string = "/assets"
 const _defineOutput string = "/pubspec.yaml"
 const _begin string = "## <<assets begin>>"
 const _end string = "## <<assets end>>"
@@ -19,7 +19,7 @@ const _end string = "## <<assets end>>"
 //通用资源名头部
 const _assetsTitle string = "- "
 
-//应用初始数据
+//Info 应用初始数据
 type Info struct {
 	//命令执行路径
 	pwd string
@@ -36,20 +36,19 @@ type Info struct {
 //实例化初始数据
 var info *Info = &Info{}
 
-//GetOutput
-//获取输出文件路径
+//GetOutput 获取输出文件路径
 func (i *Info) GetOutput() (string, error) {
 	path, err := filepath.Abs(i.pwd + i.output)
 	return path, err
 }
 
-//获取输出文件路径
+//GetOutputTest 获取输出文件路径
 func (i *Info) GetOutputTest() (string, error) {
 	path, err := filepath.Abs(i.pwd + "/pubspec1.yaml")
 	return path, err
 }
 
-//获取列表第一个元素
+//Shift 获取列表第一个元素
 func (i *Info) Shift() string {
 	length := len(i.files)
 	result := ""
@@ -62,7 +61,7 @@ func (i *Info) Shift() string {
 	return result
 }
 
-//文件缓冲
+//Push 文件缓冲
 func (i *Info) Push(item string) {
 	if i.fileContent == nil {
 		i.fileContent = []string{}
